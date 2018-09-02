@@ -1,0 +1,15 @@
+{
+  "name": "nodemonitor-v2",
+  "version": "2.0.0a",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc -p . && node index.js",
+    "start": "npm run dev"
+  },
+  "private": true,
+  "dependencies": {
+    "@types/node": "^10.9.4",
+    "rxjs": "^6.3.1"
+  },
+  "devDependencies": {}
+}
