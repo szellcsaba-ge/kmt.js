@@ -4,12 +4,14 @@ import {
 
 import {
   ConsoleConsumer,
+  LogConsumer,
 } from './Consumers';
 
 export const NodeConfig = {
   nodeName: 'nb',
   consumers: [
-    new ConsoleConsumer()
+    new ConsoleConsumer(),
+    new LogConsumer('logs'),
   ]
 };
 
