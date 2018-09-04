@@ -1,4 +1,4 @@
 export class MetricValue {
-  name: string = '';
-  value: number = 0;
+  constructor(public name: string = '', public value: number = 0) {
+  }
 }

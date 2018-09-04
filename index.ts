@@ -1,14 +1,14 @@
 import { BehaviorSubject } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, skip } from 'rxjs/operators';
 import { MetricValue } from './MetricValue';
-import { CpuMetricWatcher } from './CpuMetricWatcher';
+import { StreamConfig, NodeConfig } from './Configuration';
 
-let watcher = new CpuMetricWatcher();
-let cpuMetricStream = new BehaviorSubject(new MetricValue());
-watcher.schedule(cpuMetricStream);
+let watchers: any = {};
+let streams: any = {};
 
-cpuMetricStream.pipe(
-  map((value, index) => {
-    console.log('bh value: ', value, ', index: ', index);
-  })
-).subscribe();
+StreamConfig.forEach((value, index, arr) => {
+  watchers[value.name] = new (value.watcher)(value.options);
+  streams[value.name] = new BehaviorSubject(new MetricValue());
+  watchers[value.name].schedule(streams[value.name]);
+  streams[value.name].pipe(skip(1), map(value.parser)).subscribe();
+});

@@ -19,9 +19,8 @@ export class CpuMetricWatcher {
 
   schedule(stream: BehaviorSubject<MetricValue>) {
     setInterval(() => {
-      let currentValue: MetricValue = this.metric.getCurrentValue();
+      let currentValue: MetricValue = new MetricValue('cpu', this.metric.getCurrentValue());
       stream.next(currentValue);
-      console.log(currentValue);
     }, this.options.interval);
   }
 }
