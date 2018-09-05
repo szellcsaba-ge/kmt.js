@@ -1,7 +1,7 @@
 export class CpuMetric {
   private cpuStart: any;
 
-  constructor (private os: any) {
+  constructor(private os: any) {
     this.resetCpu();
   }
 

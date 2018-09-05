@@ -1,6 +1,6 @@
 import * as os from 'os';
 
-import { CpuMetric } from "./cpuMetric";
+import { CpuMetric } from "./CpuMetric";
 import { MetricOptions } from "./MetricOptions";
 import { BehaviorSubject } from "rxjs";
 import { MetricValue } from "./MetricValue";
