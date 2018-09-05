@@ -3,7 +3,7 @@
   "version": "2.0.0a",
   "license": "MIT",
   "scripts": {
-    "dev": "tsc -p . && node index.js",
+    "dev": "tsc -p . && node src/index.js",
     "start": "npm run dev"
   },
   "private": true,

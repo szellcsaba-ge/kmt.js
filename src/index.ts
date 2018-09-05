@@ -1,5 +1,6 @@
 import { BehaviorSubject } from 'rxjs';
 import { map, skip } from 'rxjs/operators';
+
 import { MetricValue } from './MetricValue';
 import { StreamConfig, NodeConfig } from './Configuration';
 

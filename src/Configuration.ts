@@ -13,7 +13,7 @@ export const NodeConfig = {
   consumers: [
     new ConsoleConsumer(),
     new LogConsumer('logs'),
-    new SocketIOConsumer(),
+    new SocketIOConsumer({ port: 8012, interval: 2000 }),
   ]
 };
 
