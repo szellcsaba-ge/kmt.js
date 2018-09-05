@@ -1,6 +1,6 @@
 {
-  "name": "nodemonitor-v2",
-  "version": "2.0.0a",
+  "name": "kmt.js",
+  "version": "0.5.6",
   "license": "MIT",
   "scripts": {
     "dev": "tsc -p . && node src/index.js",
