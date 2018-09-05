@@ -6,6 +6,7 @@ import {
   ConsoleConsumer,
   LogConsumer,
   SocketIOConsumer,
+  BufferConsumer,
 } from './Consumers';
 
 export const NodeConfig = {
@@ -13,7 +14,8 @@ export const NodeConfig = {
   consumers: [
     new ConsoleConsumer(),
     new LogConsumer('logs'),
-    new SocketIOConsumer({ port: 8012, interval: 2000 }),
+    new SocketIOConsumer(),
+    new BufferConsumer(),
   ]
 };
 
