@@ -1,3 +1,5 @@
+import * as os from 'os';
+
 import {
   CpuMetricWatcher,
 } from './Watchers';
@@ -10,7 +12,7 @@ import {
 } from './Consumers';
 
 export const NodeConfig = {
-  nodeName: 'nb',
+  nodeName: os.hostname,
   consumers: [
     new ConsoleConsumer(),
     new LogConsumer('logs'),
