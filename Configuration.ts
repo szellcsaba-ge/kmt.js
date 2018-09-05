@@ -5,6 +5,7 @@ import {
 import {
   ConsoleConsumer,
   LogConsumer,
+  SocketIOConsumer,
 } from './Consumers';
 
 export const NodeConfig = {
@@ -12,6 +13,7 @@ export const NodeConfig = {
   consumers: [
     new ConsoleConsumer(),
     new LogConsumer('logs'),
+    new SocketIOConsumer(),
   ]
 };
 
