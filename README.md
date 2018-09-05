@@ -6,6 +6,7 @@ Key metric tracking framework for every purpose
 
 ```
 npm i
+mkdir logs
 npm start
 ```
 
