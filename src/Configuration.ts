@@ -2,6 +2,7 @@ import * as os from 'os';
 
 import {
   CpuMetricWatcher,
+  MemoryMetricWatcher
 } from '@watchers/Watchers';
 
 import {
@@ -9,6 +10,7 @@ import {
   LogConsumer,
   SocketIOConsumer,
   BufferConsumer,
+  EmitMethod,
 } from '@consumers/Consumers';
 
 export const NodeConfig = {
@@ -16,7 +18,7 @@ export const NodeConfig = {
   consumers: [
     new ConsoleConsumer(),
     new LogConsumer('logs'),
-    new SocketIOConsumer(),
+    new SocketIOConsumer({ emitMethod: EmitMethod.average }),
     new BufferConsumer(),
   ]
 };
@@ -31,6 +33,12 @@ export const StreamConfig = [
   {
     name: 'cpu',
     watcher: CpuMetricWatcher,
+    options: { interval: 500 },
+    parser: defaultParser,
+  },
+  {
+    name: 'memory',
+    watcher: MemoryMetricWatcher,
     options: { interval: 500 },
     parser: defaultParser,
   },
