@@ -1,4 +1,4 @@
-import { MetricValue } from './MetricValue';
+import { MetricValue } from '@models/MetricValue';
 
 export class BufferConsumerOptions {
   limit: number = 5;

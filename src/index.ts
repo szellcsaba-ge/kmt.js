@@ -1,7 +1,11 @@
+import { CustomModuleLoader } from './CustomModuleLoader';
+
+let moduleLoader = new CustomModuleLoader();
+
 import { BehaviorSubject } from 'rxjs';
 import { map, skip } from 'rxjs/operators';
 
-import { MetricValue } from './MetricValue';
+import { MetricValue } from '@models/MetricValue';
 import { StreamConfig, NodeConfig } from './Configuration';
 
 let watchers: any = {};

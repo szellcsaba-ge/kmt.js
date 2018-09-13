@@ -1,4 +1,4 @@
-import { MetricValue } from './MetricValue';
+import { MetricValue } from '@models/MetricValue';
 import * as fs from 'fs';
 
 export class LogConsumer {

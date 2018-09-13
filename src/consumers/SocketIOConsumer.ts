@@ -1,4 +1,4 @@
-import { MetricValue } from './MetricValue';
+import { MetricValue } from '@models/MetricValue';
 import * as socketio from 'socket.io';
 
 export class SocketIOConsumerOptions {

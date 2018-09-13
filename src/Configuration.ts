@@ -2,14 +2,14 @@ import * as os from 'os';
 
 import {
   CpuMetricWatcher,
-} from './Watchers';
+} from '@watchers/Watchers';
 
 import {
   ConsoleConsumer,
   LogConsumer,
   SocketIOConsumer,
   BufferConsumer,
-} from './Consumers';
+} from '@consumers/Consumers';
 
 export const NodeConfig = {
   nodeName: os.hostname,

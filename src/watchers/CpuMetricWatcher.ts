@@ -1,9 +1,9 @@
 import * as os from 'os';
 
-import { CpuMetric } from "./CpuMetric";
-import { MetricOptions } from "./MetricOptions";
 import { BehaviorSubject } from "rxjs";
-import { MetricValue } from "./MetricValue";
+import { CpuMetric } from "@metrics/CpuMetric";
+import { MetricOptions } from "@models/MetricOptions";
+import { MetricValue } from "@models/MetricValue";
 
 export class CpuMetricWatcher {
   private os = os;
