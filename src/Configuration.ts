@@ -21,15 +21,17 @@ export const NodeConfig = {
   ]
 };
 
+let defaultParser = (value: any, index: number) => {
+  NodeConfig.consumers.forEach((consumer) => {
+    consumer.consume(value);
+  })
+};
+
 export const StreamConfig = [
   {
     name: 'cpu',
     watcher: CpuMetricWatcher,
     options: { interval: 500 },
-    parser: (value: any, index: number) => {
-      NodeConfig.consumers.forEach((consumer) => {
-        consumer.consume(value);
-      })
-    },
+    parser: defaultParser,
   },
 ];
