@@ -1,26 +1,16 @@
 import * as os from 'os';
 
-import { BehaviorSubject } from "rxjs";
 import { CpuMetric } from "@metrics/CpuMetric";
 import { MetricOptions } from "@models/MetricOptions";
-import { MetricValue } from "@models/MetricValue";
+import { Watcher } from '@watchers/Watcher';
 
-export class CpuMetricWatcher {
+export class CpuMetricWatcher extends Watcher {
   private os = os;
-  private metric: CpuMetric;
-  private options: MetricOptions = {
-    interval: 1000,
-  }
+  public metric: any;
+  public metricName = 'cpu';
 
   constructor(options: MetricOptions = new MetricOptions()) {
-    this.options.interval = options.interval || this.options.interval;
+    super(options);
     this.metric = new CpuMetric(this.os);
-  }
-
-  schedule(stream: BehaviorSubject<MetricValue>) {
-    setInterval(() => {
-      let currentValue: MetricValue = new MetricValue('cpu', this.metric.getCurrentValue());
-      stream.next(currentValue);
-    }, this.options.interval);
   }
 }
