@@ -2,7 +2,8 @@ import * as os from 'os';
 
 import {
   CpuMetricWatcher,
-  MemoryMetricWatcher
+  MemoryMetricWatcher,
+  DiskFreeMetricWatcher
 } from '@watchers/Watchers';
 
 import {
@@ -39,6 +40,12 @@ export const StreamConfig = [
   {
     name: 'memory',
     watcher: MemoryMetricWatcher,
+    options: { interval: 500 },
+    parser: defaultParser,
+  },
+  {
+    name: 'drives',
+    watcher: DiskFreeMetricWatcher,
     options: { interval: 500 },
     parser: defaultParser,
   },
