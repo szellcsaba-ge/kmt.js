@@ -20,8 +20,11 @@ export class DiskFreeMetric {
           this.diskUsage.check(mountPoint.path, (err: Error, info: DiskUsage) => {
             if (error) {
               throw error;
+            } else {
+              if (info) {
+                this.metricArray[mountPoint.path] = info.available / info.total;
+              }
             }
-            this.metricArray[mountPoint.path] = info.available / info.total;
           });
         })
       });
