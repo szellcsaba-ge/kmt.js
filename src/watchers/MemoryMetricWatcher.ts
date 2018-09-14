@@ -8,6 +8,7 @@ export class MemoryMetricWatcher extends Watcher {
   private os = os;
   public metric: any;
   public metricName = 'memory';
+  public metricType = 'memory';
 
   constructor(options: MetricOptions = new MetricOptions()) {
     super(options);

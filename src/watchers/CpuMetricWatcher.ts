@@ -8,6 +8,7 @@ export class CpuMetricWatcher extends Watcher {
   private os = os;
   public metric: any;
   public metricName = 'cpu';
+  public metricType = 'cpu';
 
   constructor(options: MetricOptions = new MetricOptions()) {
     super(options);

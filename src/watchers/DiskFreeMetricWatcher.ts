@@ -10,6 +10,7 @@ export class DiskFreeMetricWatcher extends Watcher {
   private diskUsage = diskUsage;
   public metric: any;
   public metricName = 'drives';
+  public metricType = 'drives';
 
   constructor(options: MetricOptions = new MetricOptions()) {
     super(options);
