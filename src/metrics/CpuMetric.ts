@@ -22,6 +22,6 @@ export class CpuMetric {
   }
 
   getCurrentValue() {
-    return this.calculateCpuUsage(this.os.cpus()).cpuUsage;
+    return this.calculateCpuUsage(this.os.cpus()).cpuUsage / 100;
   }
 }
