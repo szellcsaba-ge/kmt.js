@@ -1,6 +1,6 @@
 # kmt.js
 
-Key metric tracking framework for every purpose
+Key Metric Tracking framework for every purpose
 
 # To run
 
@@ -14,3 +14,14 @@ npm start
 
 Check ```src/Configuration.ts```
 
+# To dev
+
+Run file typescript compiler in watch mode in the background (transpiles to js on every modification)
+```
+tsc -w -p .
+```
+
+Run nodemon in the background to check for transpiled js changes
+```
+nodemon dist
+```
