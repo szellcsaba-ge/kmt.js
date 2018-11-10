@@ -1,6 +1,6 @@
 export class HttpMetric {
     private timeVal : any; 
-    constructor(private request : any){
+    constructor(private request : any, private baseUrl : any){
     }
 
     datum(){
@@ -10,10 +10,9 @@ export class HttpMetric {
     }
     
     async pelda() {
-    const baseUrl = 'https://www.index.hu';
-    //const queryString = '?num=100&min=1&max=100&col=5&base=10&format=html&rnd=new';
+    this.baseUrl = this.baseUrl;   
     var options = {
-        uri: baseUrl //+ queryString,
+        uri: this.baseUrl
     };
     const result = await this.request.get(options);
     return result;

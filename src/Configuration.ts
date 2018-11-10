@@ -46,7 +46,7 @@ export const StreamConfig = [
   {
     name: 'http',
     watcher: HttpMetricWatcher,
-    options: { interval: 500 },
+    options: { interval: 500, baseUrl: 'https://www.index.hu' },
     parser: defaultParser,
   }
 ];

@@ -1,8 +1,8 @@
 import * as request from "request-promise-native";
 
 import { HttpMetric } from "@metrics/HttpMetric";
-import { MetricOptions } from "@models/MetricOptions";
 import { Watcher } from '@watchers/Watcher';
+import { HttpMetricOptions } from "@models/HttpMetricOptions";
 
 export class HttpMetricWatcher extends Watcher {
   private request = request;
@@ -10,8 +10,9 @@ export class HttpMetricWatcher extends Watcher {
   public metricName = 'http';
   public metricType = 'http';
 
-  constructor(options: MetricOptions = new MetricOptions()) {
+
+  constructor(options: HttpMetricOptions = new HttpMetricOptions()) {
     super(options);
-    this.metric = new HttpMetric(this.request);
+    this.metric = new HttpMetric(this.request, options.baseUrl);
   }
 }
