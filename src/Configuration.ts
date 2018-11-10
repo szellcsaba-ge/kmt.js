@@ -55,7 +55,7 @@ export const StreamConfig = [
   {
     name: 'http',
     watcher: HttpMetricWatcher,
-    options: { interval: 500, baseUrl: 'https://www.index.hu' },
+    options: { interval: 500, baseUrl: 'http://starschema.com' },
     parser: defaultParser,
   },
 {
