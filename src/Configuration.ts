@@ -4,7 +4,9 @@ import {
   CpuMetricWatcher,
   MemoryMetricWatcher,
   CpuLoadMetricWatcher,
+  UptimeMetricWatcher,
   HttpMetricWatcher,
+
 } from '@watchers/Watchers';
 
 import {
@@ -45,9 +47,15 @@ export const StreamConfig = [
     parser: defaultParser,
   },
   {
+  name: 'uptime',
+  watcher: UptimeMetricWatcher,
+  options: { interval: 500 },
+  parser: defaultParser,
+},
+  {
     name: 'http',
     watcher: HttpMetricWatcher,
-    options: { interval: 500 },
+    options: { interval: 500, baseUrl: 'https://www.index.hu' },
     parser: defaultParser,
   },
 {
