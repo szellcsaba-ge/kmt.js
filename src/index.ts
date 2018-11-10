@@ -11,7 +11,7 @@ import { StreamConfig, NodeConfig } from './Configuration';
 let watchers: any = {};
 let streams: any = {};
 
-StreamConfig.forEach((value, index, arr) => {
+StreamConfig.forEach((value: any, index, arr) => {
   watchers[value.name] = new (value.watcher)(value.options);
   streams[value.name] = new BehaviorSubject(new MetricValue());
   watchers[value.name].schedule(streams[value.name]);

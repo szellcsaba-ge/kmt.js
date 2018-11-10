@@ -1,8 +1,8 @@
-import * as request from "request-promise-native";
+import * as request from 'request-promise-native';
 
-import { HttpMetric } from "@metrics/HttpMetric";
+import { HttpMetric } from '@metrics/HttpMetric';
 import { Watcher } from '@watchers/Watcher';
-import { HttpMetricOptions } from "@models/HttpMetricOptions";
+import { HttpMetricOptions } from '@models/HttpMetricOptions';
 
 export class HttpMetricWatcher extends Watcher {
   private request = request;

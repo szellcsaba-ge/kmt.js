@@ -47,18 +47,18 @@ export const StreamConfig = [
     parser: defaultParser,
   },
   {
-  name: 'uptime',
-  watcher: UptimeMetricWatcher,
-  options: { interval: 500 },
-  parser: defaultParser,
-},
+    name: 'uptime',
+    watcher: UptimeMetricWatcher,
+    options: { interval: 500 },
+    parser: defaultParser,
+  },
   {
     name: 'http',
     watcher: HttpMetricWatcher,
     options: { interval: 500, baseUrl: 'http://starschema.com' },
     parser: defaultParser,
   },
-{
+  {
     name: 'cpuload',
     watcher: CpuLoadMetricWatcher,
     options: { interval: 500 },
