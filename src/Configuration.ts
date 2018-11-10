@@ -3,6 +3,7 @@ import * as os from 'os';
 import {
   CpuMetricWatcher,
   MemoryMetricWatcher,
+  CpuLoadMetricWatcher,
   UptimeMetricWatcher,
   HttpMetricWatcher,
 
@@ -55,6 +56,12 @@ export const StreamConfig = [
     name: 'http',
     watcher: HttpMetricWatcher,
     options: { interval: 500, baseUrl: 'https://www.index.hu' },
+    parser: defaultParser,
+  },
+{
+    name: 'cpuload',
+    watcher: CpuLoadMetricWatcher,
+    options: { interval: 500 },
     parser: defaultParser,
   },
 ];
