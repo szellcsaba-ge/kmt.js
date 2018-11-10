@@ -3,6 +3,7 @@ import * as os from 'os';
 import {
   CpuMetricWatcher,
   MemoryMetricWatcher,
+  UptimeMetricWatcher,
 } from '@watchers/Watchers';
 
 import {
@@ -42,4 +43,10 @@ export const StreamConfig = [
     options: { interval: 500 },
     parser: defaultParser,
   },
+  {
+  name: 'uptime',
+  watcher: UptimeMetricWatcher,
+  options: { interval: 500 },
+  parser: defaultParser,
+},
 ];
