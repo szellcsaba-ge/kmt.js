@@ -18,7 +18,7 @@ export const NodeConfig = {
   consumers: [
     new ConsoleConsumer(),
     new LogConsumer('logs'),
-    new SocketIOConsumer({ emitMethod: EmitMethod.average }),
+    new SocketIOConsumer({ emitMethod: EmitMethod.average, interval: 1000 }),
     new BufferConsumer(),
   ]
 };
