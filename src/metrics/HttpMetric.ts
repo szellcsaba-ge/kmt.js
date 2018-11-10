@@ -9,8 +9,7 @@ export class HttpMetric {
         return date.getTime();
     }
     
-    async pelda() {
-    this.baseUrl = this.baseUrl;   
+    async pelda() {    
     var options = {
         uri: this.baseUrl
     };
