@@ -9,8 +9,11 @@
   "private": true,
   "dependencies": {
     "@types/node": "^10.9.4",
+    "@types/request-promise-native": "^1.0.15",
     "@types/socket.io": "^1.4.38",
     "module-alias": "^2.1.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5",
     "rxjs": "^6.3.1",
     "socket.io": "^2.1.1"
   },
